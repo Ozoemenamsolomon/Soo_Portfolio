@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Solozo´s Page</title>
+    <link href="https://allfont.net/allfont.css?fonts=kaufmann-bt" rel="stylesheet" type="text/css" />
+</head>
+<body class="body">
+    <div class="container">
+        <div class="nav_bar">
+            <div class="logo"  ><h1> <a href="#home">Solozo</a></h1></div>
+            <div class="nav_toogle">
+                <ul class="navigation" id="navi">
+                    <!-- <li class="nav_list" ><a href="#home">Home</a></li> -->
+                    <li class="nav_list" ><a href="#about">About</a></li>
+                    <li class="nav_list" ><a href="#work">Works</a></li>
+                    <li class="nav_list" ><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="settings">
+                    <ul>
+                        <li class="mode">Mode</li>
+                        <li>Language</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+        <section class="home" id="home">
+            <div class="hello">
+                <h1>Hello,<br>I´m Solomon.</h1>
+                <p><strong>Frontend Developer</strong><br><br> actively looking for my next oppurtunity to make 
+                    a difference.</p>
+            </div>
+            <div class="home_image"></div>
+        </section>
+         <!--style="font-family: 'Kaufmann BT', arial;" --> 
+        <section class="about" id="about">
+            <header><H1>About Me</H1></header>
+        </section>
+        <section class="work" id="work">            
+            <header>
+                <H1>Portfolio</H1>
+                <p>Some of my finest works</p>
+            </header>
+            <div class="work_cards">
+                <div class="work_card one"></div>
+                <div class="work_card two"></div>
+                <div class="work_card three"></div>
+                <div class="work_card four">
+                    <iframe width="400" height="200" src="https://www.youtube.com/embed/FDtVcmDQNso" 
+                    title="YouTube video player" style="border: 0;"  
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </div>
+                <div class="work_card five"></div>
+                <div class="work_card six"></div>
+            </div>
+        </section>
+        <section  class="contact" id="contact">
+            <header><H1>Contact Me</H1></header>
+            <!-- <div class="contact_empty"></div> -->
+            <div class="form">
+                <form action="post">
+                    <div class="input_boxes">
+                        <input type="text" placeholder="Name" autocomplete="name">
+                        <input type="email" autocomplete="email" name="email" id="email" placeholder="E-mail">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="textarea_send">
+                        <textarea name="message" id="message" cols="25" rows="4"></textarea>
+                        <input type="button" value="SEND">
+                    </div>
+                </form>
+                <div class="find_me">
+                    <p>Find me on</p>
+                </div>
+            </div>
+            <div class="contact_picture">
+                <img src="./Images/ContactMe_Char.png" alt="">
+            </div>
+            <div class="footer">
+                <p>Copyright © 2019. Solozo.page
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const mode = document.querySelector('.mode')
+        const body = document.querySelector('.body')
+
+        mode.addEventListener('click', () =>{
+            body.classList.toggle('lightmood')
+            console.log('halleluyah!')
+        })
+
+
+    </script>
+    <!-- <script src="./Script.js"></script> -->
+</body>
+</html>
