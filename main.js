@@ -11,6 +11,7 @@ const germanRecaptcha = document.querySelector('.recaptcha_de')
 const englishRecaptcha = document.querySelector('.recaptcha_en')
 const logoGerman = document.querySelector(".logo-de")
 const logoEnglish = document.querySelector(".logo-en")
+const modal = document.querySelector(".modal")
 
 
 // , darkmoodToggle.addEventListener
@@ -33,6 +34,28 @@ darkmoodToggle.addEventListener("click", () => {
     // show_hide(darkmoodToggle)
 })
 
+const pictureCards = document.querySelectorAll(".card-hover")
+
+pictureCards.forEach(pictureCard => {
+    pictureCard.addEventListener("click", activateModal)
+    function activateModal() {
+        console.log(pictureCard.parentElement.className)
+        modal.classList.add("activated")
+        // window.scrollTo(0, 0);
+    }
+});
+modal.addEventListener("click", (e) => {
+    if(e.target.tagName === "DIV"){
+        modal.classList.remove("activated")
+    }
+    // console.dir(e.target.tagName)
+
+})
+
+// document.addEventListener("click",(e) => {
+//     const clicked = e.target
+//     console.log(clicked)
+// })
 
 languageCheckbox.addEventListener('click', languageSwitch)
 
