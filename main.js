@@ -39,7 +39,9 @@ const pictureCards = document.querySelectorAll(".card-hover")
 pictureCards.forEach(pictureCard => {
     pictureCard.addEventListener("click", activateModal)
     function activateModal() {
-        console.log(pictureCard.parentElement.className)
+        const className = pictureCard.parentElement.className
+        // modal.children[0].attributes[0].value  = `./Images/high_images/${className}.jpg`
+        modal.children[0].setAttribute("src",`./Images/high_images/${className}.jpg`)
         modal.classList.add("activated")
         // window.scrollTo(0, 0);
     }
