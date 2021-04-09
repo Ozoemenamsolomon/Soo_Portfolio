@@ -300,6 +300,7 @@ nav {
 .modal p{
   color: #fff;
   padding: 2em;
+  max-width: 75%;
   cursor: auto;
   background-color: rgba(0, 0, 0, 0.596);
 }
@@ -363,9 +364,17 @@ main {
 }
 /* about section */
 .about-content {
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 5fr 3fr 2fr;
-  grid-template-areas: 'about-text about-text about-text about-img' 'about-software about-devtools about-softskills about-img' 'about-software about-language about-softskills about-img';
+  grid-template-areas: 'about-text about-text about-text about-img' 'about-software about-devtools about-softskills about-img' 'about-software about-language about-softskills about-img'; */
+
+  
+  grid-template-columns: repeat(2, 1.5fr) 1fr;
+  grid-template-rows: 5fr 3fr 2fr;
+  grid-template-areas:
+      'about-text about-text about-img'
+      'about-software about-devtools about-img'
+      'about-language about-softskills about-img';
 }
 .about-text {
   grid-area: about-text;
@@ -400,7 +409,7 @@ main {
   /* justify-content: center; */
 }
 .software-images img {
-  width: 15%;
+  width: 10%;
 }
 .about-devtools {
   padding: 0.5em;
@@ -415,7 +424,7 @@ main {
   /* justify-content: center; */
 }
 .devtools-images img {
-  width: 15%;
+  width: 10%;
 }
 .about-softskills {
   padding: 0.5em;
@@ -757,6 +766,23 @@ footer {
   .home-img img{
     height: 56%;
   }
+  .devtools-images img {
+    width: 15%;
+  }
+  .software-images img {
+    width: 15%;
+  }
+}
+@media (max-width: 900px) {
+  .work-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr 3.5fr 3.5fr;
+    /* grid-gap: 1.5em; */
+    grid-template-areas:
+        'work-text work-text'
+        'work1 work2'
+        'work3 work4';
+  }
 }
 
 @media (max-width: 600px) {
@@ -819,13 +845,20 @@ footer {
   /* about section */
 
   .about-content{
+    padding-right: 6%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5fr 3fr 3fr;
     grid-template-areas:
+        'about-text about-text about-text'
+        'about-software about-devtools about-img'
+        'about-language about-softskills about-img';
+    /* grid-template-areas:
         'about-text about-text about-text about-img'
         'about-software about-devtools about-softskills about-img'
-        'about-language about-language about-softskills about-img';
-  }
+        'about-language about-language about-softskills about-img';*/
+  } 
   .about-img img{
-    width: 170%;
+    width: 120%;
   }
 
 

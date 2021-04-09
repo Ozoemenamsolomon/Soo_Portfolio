@@ -38,11 +38,15 @@ const pictureCards = document.querySelectorAll(".card-hover")
 
 pictureCards.forEach(pictureCard => {
     pictureCard.addEventListener("click", activateModal)
-    function activateModal() {
-        const className = pictureCard.parentElement.className
-        // modal.children[0].attributes[0].value  = `./Images/high_images/${className}.jpg`
-        modal.children[0].setAttribute("src",`./Images/high_images/${className}.jpg`)
-        modal.classList.add("activated")
+    function activateModal(e) {
+        if (e.target.tagName === "DIV") {
+            const className = pictureCard.parentElement.className
+            // modal.children[0].attributes[0].value  = `./Images/high_images/${className}.jpg`
+            // change the image source dynamically based on item clicked
+            modal.children[0].setAttribute("src",`./Images/high_images/${className}.jpg`)
+            // show the modal
+            modal.classList.add("activated")
+        }
         // window.scrollTo(0, 0);
     }
 });
@@ -50,6 +54,7 @@ pictureCards.forEach(pictureCard => {
 
 modal.addEventListener("click", (e) => {
     if(e.target.tagName === "DIV"){
+        // hide modal
         modal.classList.remove("activated")
     }
     // console.dir(e.target.tagName)
@@ -63,10 +68,10 @@ modal.addEventListener("click", (e) => {
 
 languageCheckbox.addEventListener('click', languageSwitch)
 
-function logStatus(e) {
-    console.log(languageCheckbox.checked)
-    console.dir(languageCheckbox)
-}
+// function logStatus(e) {
+//     console.log(languageCheckbox.checked)
+//     console.dir(languageCheckbox)
+// }
 
 function languageSwitch() {
     if (languageCheckbox.checked == true){
