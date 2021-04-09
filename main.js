@@ -46,6 +46,8 @@ pictureCards.forEach(pictureCard => {
         // window.scrollTo(0, 0);
     }
 });
+
+
 modal.addEventListener("click", (e) => {
     if(e.target.tagName === "DIV"){
         modal.classList.remove("activated")

@@ -763,6 +763,16 @@ footer {
   section header h1{
     font-size: 3em;
   }
+  .about-content p,
+  .work-content p,
+  .process-content p{
+    font-size: unset;
+  }
+  .about ,
+  .work ,
+  .process {
+    height: auto;
+  }
 
   /* nav */
   .logo{
@@ -808,10 +818,68 @@ footer {
 
   /* about section */
 
+  .about-content{
+    grid-template-areas:
+        'about-text about-text about-text about-img'
+        'about-software about-devtools about-softskills about-img'
+        'about-language about-language about-softskills about-img';
+  }
+  .about-img img{
+    width: 170%;
+  }
+
+
   /* work section */
+  .work-content {
+    padding-right: 6%;
+
+  }
+  .work-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(4, 1.5fr);
+    grid-gap: 1.5em;
+    grid-template-areas:
+        'work-text'
+        'work1'
+        'work2'
+        'work3'
+        'work4';
+  }
+  .work1{
+    margin: 0% 5%;
+  }
+  .work2{
+    margin: 0% 5%;
+  }
+  .work3{
+    margin: 0% 5%;
+  }
+  .work4{
+    margin: 0% 5%;
+  }
 
   /* process section */
-
+  .process-content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr .8fr .8fr .8fr;
+    grid-template-areas:
+        'process-text'
+        'process1'
+        'process2'
+        'process3';
+    padding-right: 6%;
+    padding-right: 6%;
+    grid-gap: 1em;
+  }
+  .process1{
+    margin: 0% 5%;
+  }
+  .process2{
+    margin: 0% 5%;
+  }
+  .process3{
+    margin: 0% 5%;
+  }
   /* contact section */
 
   .contact{
