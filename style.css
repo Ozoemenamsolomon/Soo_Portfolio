@@ -57,7 +57,7 @@ section {
   display: flex;
   flex-direction: column;
   /* padding-top: 3.5em; */
-  overflow: hidden;
+  overflow: auto;
   /*border: 2px solid red;*/
 }
 section:nth-child(odd) {
@@ -544,6 +544,14 @@ main {
   background-color: yellow;
   border-radius: 1em;
   overflow: hidden;
+  background-image: url(./Images/work3.jpg);
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.work3:hover{
+  background-size: 200% 200%;
+  animation: mymove .6s forwards;
 }
 .work3:hover .card-hover{
   opacity: 1;
