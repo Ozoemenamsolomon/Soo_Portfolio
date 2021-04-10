@@ -47,6 +47,7 @@ pictureCards.forEach(pictureCard => {
             // show the modal
             modal.classList.add("activated")
         }
+        console.dir(e.target.parentElement.parentElement)
         // window.scrollTo(0, 0);
     }
 });

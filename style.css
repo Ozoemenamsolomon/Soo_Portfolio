@@ -363,6 +363,9 @@ main {
   margin-right: 0.2em;
 }
 /* about section */
+.about{
+  height: auto;
+}
 .about-content {
   /* grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 5fr 3fr 2fr;
@@ -843,6 +846,7 @@ footer {
   }
 
   /* about section */
+
 
   .about-content{
     padding-right: 6%;
