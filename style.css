@@ -118,7 +118,7 @@ nav {
   text-align: center;
   display: flex;
 }
-.logo-de{
+.logo-de {
   display: none;
 }
 .logo a {
@@ -161,12 +161,12 @@ nav {
   color: var(--text-colour);
   font-family: 'Dancing Script', cursive;
 }
-.settings{
+.settings {
   cursor: pointer;
   transition: 0.5s;
   user-select: none;
 }
-.settings:hover ul{
+.settings:hover ul {
   display: flex;
 }
 /* .settings:{
@@ -265,7 +265,7 @@ nav {
   cursor: pointer;
 }
 /* modal */
-.modal{
+.modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -280,24 +280,23 @@ nav {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: zoom-out;
 }
-.modal.activated{
+.modal.activated {
   opacity: 1;
   pointer-events: unset;
 }
-.modal img{
+.modal img {
   width: 65%;
-  transform: scale(.2);
-  transition: all .5s ease-in-out;
+  transform: scale(0.2);
+  transition: all 0.5s ease-in-out;
   cursor: auto;
 }
-.modal.activated img{
+.modal.activated img {
   transform: scale(1);
-
 }
-.modal p{
+.modal p {
   color: #fff;
   padding: 2em;
   max-width: 75%;
@@ -363,7 +362,7 @@ main {
   margin-right: 0.2em;
 }
 /* about section */
-.about{
+.about {
   height: auto;
 }
 .about-content {
@@ -371,13 +370,12 @@ main {
   grid-template-rows: 5fr 3fr 2fr;
   grid-template-areas: 'about-text about-text about-text about-img' 'about-software about-devtools about-softskills about-img' 'about-software about-language about-softskills about-img'; */
 
-  
   grid-template-columns: repeat(2, 1.5fr) 1fr;
   grid-template-rows: 5fr 3fr 2fr;
   grid-template-areas:
-      'about-text about-text about-img'
-      'about-software about-devtools about-img'
-      'about-language about-softskills about-img';
+    'about-text about-text about-img'
+    'about-software about-devtools about-img'
+    'about-language about-softskills about-img';
 }
 .about-text {
   grid-area: about-text;
@@ -491,18 +489,22 @@ main {
   -o-transition: background-size 2s ease-in;
   -webkit-transition: background-size 2s ease-in; */
 }
-.work1:hover{
+.work1:hover {
   background-size: 200% 200%;
-  animation: mymove .6s forwards;
+  animation: mymove 0.6s forwards;
 }
-.work1:hover .card-hover{
+.work1:hover .card-hover {
   opacity: 1;
 }
 @keyframes mymove {
-  0% {background-size: 120% 120%;}
-  100% {background-size: 100% 100%;}
+  0% {
+    background-size: 120% 120%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
 }
-.card-hover{
+.card-hover {
   display: flex;
   padding: 8%;
   height: 100%;
@@ -512,14 +514,14 @@ main {
   width: 100%;
   opacity: 0;
   cursor: zoom-in;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   justify-content: space-between;
 }
-.card-hover .fa{
+.card-hover .fa {
   color: #fff;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-.card-hover .fa:hover{
+.card-hover .fa:hover {
   transform: scale(1.3);
 }
 .work2 {
@@ -527,16 +529,16 @@ main {
   background-color: orange;
   border-radius: 1em;
   overflow: hidden;
-  background-image: url(https://images.unsplash.com/photo-1594808985790-98a065b97476?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2146&q=80);
+  background-image: url(./Images/work2.jpg);
   background-size: 150% 150%;
   background-repeat: no-repeat;
   background-position: center;
 }
-.work2:hover{
+.work2:hover {
   background-size: 200% 200%;
-  animation: mymove .6s forwards;
+  animation: mymove 0.6s forwards;
 }
-.work2:hover .card-hover{
+.work2:hover .card-hover {
   opacity: 1;
 }
 .work3 {
@@ -549,11 +551,11 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-.work3:hover{
+.work3:hover {
   background-size: 200% 200%;
-  animation: mymove .6s forwards;
+  animation: mymove 0.6s forwards;
 }
-.work3:hover .card-hover{
+.work3:hover .card-hover {
   opacity: 1;
 }
 .work4 {
@@ -561,8 +563,16 @@ main {
   background-color: green;
   border-radius: 1em;
   overflow: hidden;
+  background-image: url(./Images/work4.jpg);
+  background-size: 150% 150%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.work4:hover .card-hover{
+.work4:hover {
+  background-size: 200% 200%;
+  animation: mymove 0.6s forwards;
+}
+.work4:hover .card-hover {
   opacity: 1;
 }
 /* process section */
@@ -588,27 +598,30 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-.process1:hover{
+.process1:hover {
   background-size: 200% 200%;
-  animation: mymove .6s forwards;
+  animation: mymove 0.6s forwards;
 }
-.process1:hover .card-hover{
+.process1:hover .card-hover {
   opacity: 1;
 }
 .process2 {
   background-color: yellow;
   grid-area: process2;
   border-radius: 1em;
+  background-image: url(./Images/process2.jpg);
+  background-size: cover;
+  background-position: center;
   background-size: 120% 120%;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
 }
-.process2:hover{
+.process2:hover {
   background-size: 200% 200%;
-  animation: mymove .6s forwards;
+  animation: mymove 0.6s forwards;
 }
-.process2:hover .card-hover{
+.process2:hover .card-hover {
   opacity: 1;
 }
 .process3 {
@@ -620,11 +633,11 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-.process3:hover{
+.process3:hover {
   background-size: 200% 200%;
-  animation: mymove .6s forwards;
+  animation: mymove 0.6s forwards;
 }
-.process3:hover .card-hover{
+.process3:hover .card-hover {
   opacity: 1;
 }
 /* contact section */
@@ -726,7 +739,7 @@ main {
   border: none;
   outline: none;
 }
-.form2 > [type="submit"] {
+.form2 > [type='submit'] {
   /* font-size: large; */
   width: 40%;
   font-size: x-large;
@@ -774,7 +787,7 @@ footer {
   justify-content: center;
 }
 @media (max-width: 1200px) {
-  .home-img img{
+  .home-img img {
     height: 56%;
   }
   .devtools-images img {
@@ -790,195 +803,191 @@ footer {
     grid-template-rows: 3fr 3.5fr 3.5fr;
     /* grid-gap: 1.5em; */
     grid-template-areas:
-        'work-text work-text'
-        'work1 work2'
-        'work3 work4';
+      'work-text work-text'
+      'work1 work2'
+      'work3 work4';
   }
 }
 
 @media (max-width: 600px) {
-  section header h1{
+  section header h1 {
     font-size: 3em;
   }
   .about-content p,
   .work-content p,
-  .process-content p{
+  .process-content p {
     font-size: unset;
   }
-  .about ,
-  .work ,
+  .about,
+  .work,
   .process {
     height: auto;
   }
 
   /* nav */
-  .logo{
+  .logo {
     width: 6em;
-
   }
-  .logo h1{
+  .logo h1 {
     font-size: 2rem;
   }
-  .nav-list{
+  .nav-list {
     margin-right: 0;
   }
-  .nav-list li{
+  .nav-list li {
     font-size: 0.9em;
   }
-  .settings span{
+  .settings span {
     display: none;
   }
-  .dropdown{
+  .dropdown {
     right: -3em;
   }
-  .checkbox::after{
+  .checkbox::after {
     left: revert;
   }
-  .checkbox:checked::after{
+  .checkbox:checked::after {
     left: 4em;
   }
   /* home section */
-  .home{
+  .home {
     flex-direction: column;
   }
-  .hello{
+  .hello {
     height: 60%;
     justify-content: flex-end;
     max-width: revert;
   }
-  .hello h1{
+  .hello h1 {
     font-size: 3em;
   }
-  .home-img img{
+  .home-img img {
     height: 90%;
   }
 
   /* about section */
 
-
-  .about-content{
+  .about-content {
     padding-right: 6%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 5fr 3fr 3fr;
     grid-template-areas:
-        'about-text about-text about-text'
-        'about-software about-devtools about-img'
-        'about-language about-softskills about-img';
+      'about-text about-text about-text'
+      'about-software about-devtools about-img'
+      'about-language about-softskills about-img';
     /* grid-template-areas:
         'about-text about-text about-text about-img'
         'about-software about-devtools about-softskills about-img'
         'about-language about-language about-softskills about-img';*/
-  } 
-  .about-img img{
+  }
+  .about-img img {
     width: 120%;
   }
-
 
   /* work section */
   .work-content {
     padding-right: 6%;
-
   }
   .work-content {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr repeat(4, 1.5fr);
     grid-gap: 1.5em;
     grid-template-areas:
-        'work-text'
-        'work1'
-        'work2'
-        'work3'
-        'work4';
+      'work-text'
+      'work1'
+      'work2'
+      'work3'
+      'work4';
   }
-  .work1{
+  .work1 {
     margin: 0% 5%;
   }
-  .work2{
+  .work2 {
     margin: 0% 5%;
   }
-  .work3{
+  .work3 {
     margin: 0% 5%;
   }
-  .work4{
+  .work4 {
     margin: 0% 5%;
   }
 
   /* process section */
   .process-content {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1fr .8fr .8fr .8fr;
+    grid-template-rows: 1fr 0.8fr 0.8fr 0.8fr;
     grid-template-areas:
-        'process-text'
-        'process1'
-        'process2'
-        'process3';
+      'process-text'
+      'process1'
+      'process2'
+      'process3';
     padding-right: 6%;
     padding-right: 6%;
     grid-gap: 1em;
   }
-  .process1{
+  .process1 {
     margin: 0% 5%;
   }
-  .process2{
+  .process2 {
     margin: 0% 5%;
   }
-  .process3{
+  .process3 {
     margin: 0% 5%;
   }
   /* contact section */
 
-  .contact{
+  .contact {
     overflow: unset;
     height: fit-content;
   }
-  .contact-content{
+  .contact-content {
     display: flex;
     flex-direction: column;
     gap: unset;
     grid-template-columns: revert;
   }
-  .form-findme{
+  .form-findme {
     height: fit-content;
   }
-  .contact-form{
+  .contact-form {
     flex-direction: column;
     flex: revert;
   }
-  .contact-form form{
+  .contact-form form {
     flex-direction: column;
     gap: revert;
   }
-  .form1{
+  .form1 {
     align-items: revert;
     padding-top: 1.5em;
   }
-  .form1 input{
+  .form1 input {
     height: 3em;
   }
-  .form1 div{
+  .form1 div {
     height: revert;
   }
-  .form2{
+  .form2 {
     padding-top: 0em;
   }
-  .form2 input{
+  .form2 input {
     height: 3em;
   }
-  .form2 textarea{
+  .form2 textarea {
     height: 7em;
   }
-  .contact-findme{
+  .contact-findme {
     padding-left: 0.5em;
   }
-  .socials a img{
+  .socials a img {
     width: 2em;
     margin: 0 1em 0 0;
   }
-  .form2 > [type="submit"] {
+  .form2 > [type='submit'] {
     font-size: unset;
     padding: 0.4em 1em;
   }
-  .contact-img img{
+  .contact-img img {
     width: unset;
     height: 180px;
   }
