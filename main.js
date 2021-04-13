@@ -41,18 +41,20 @@ pictureCards.forEach((pictureCard) => {
       const className = pictureCard.parentElement.className;
       // modal.children[0].attributes[0].value  = `./Images/high_images/${className}.jpg`
       // change the image source dynamically based on item clicked
-      modal.children[0].setAttribute(
-        'src',
-        `./Images/high_images/${className}.jpg`
-      );
+      const modalImage = document.querySelector('.modal-img');
+
+      modalImage.setAttribute('src', `./Images/high_images/${className}.jpg`);
       // show the modal
       modal.classList.add('activated');
+
+      const modalText = document.querySelector('.modal-text');
+      const cardDescription = e.target.parentElement.dataset.description;
+      modalText.innerText = cardDescription;
     }
-    console.dir(e.target.parentElement.parentElement);
+
     // window.scrollTo(0, 0);
   }
 });
-
 modal.addEventListener('click', (e) => {
   if (e.target.tagName === 'DIV') {
     // hide modal
