@@ -1,12 +1,12 @@
 {
-
-
-
-
-
-
-
-
-
-    
+  "home_section": {
+    "greeting": ["Hello,", "I´m Solomon."],
+    "position": "Frontend Developer",
+    "button": "View my portfolio"
+  },
+  "about_section": {
+    "title": "About Me",
+    "aboutText": "I´m a 22-year-old frontend developer with a freelance background in Graphics Design, currently studying computer science in the university of Siegen.<br />With a combination of graphics designing and software development, I look for creative ways to write efficient codes without compromising on the aesthetics of my projects.<br /> I´m very interested in the software development spectrum and very much open to learning more technologies with the ultimate goal of becoming a Full-Stack developer.<br /> Feel free to reach out to me by using the contact form below or by clicking <a>here</a>",
+    "button": "View my portfolio"
+  }
 }
